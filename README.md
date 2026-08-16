@@ -57,3 +57,11 @@ python3 -m http.server 8000
 - Fonts are loaded from Google Fonts (Lato + Abril Fatface).
 - The map uses an embedded OpenStreetMap view; "Проложить маршрут" opens Google Maps directions.
 - `Impressum`, `AGB` and `Datenschutz` are placeholders pending the legal texts.
+
+---
+
+## Rechte
+
+Rechteinhaber ist Klaus Nitzsche. Welche Lizenz gilt und welche Rolle die
+KI-Werkzeuge hatten, steht in [`RECHTE.md`](RECHTE.md); der Lizenztext in
+[`LICENSE`](LICENSE).
