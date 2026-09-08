@@ -497,14 +497,12 @@
 
     var work = [];
 
-    /* Cache-Storage (Service Worker o. Ä.) leeren */
-    if (window.caches && caches.keys) {
-      work.push(
-        caches.keys().then(function (keys) {
-          return Promise.all(keys.map(function (k) { return caches.delete(k); }));
-        }).catch(function () {})
-      );
-    }
+    /* Cache-Storage: BEWUSST NICHT geleert (2026-09-08). Diese Seite hat keinen
+       Service-Worker und legt keinen eigenen Vorrat an — `caches` gehoert aber
+       dem URSPRUNG, und auf lausiklauskn-png.github.io liegen rund zwanzig
+       Apps. Die alte Zeile loeschte ausschliesslich DEREN Offline-Vorraete.
+       Gemessen: Sage-Protokol/tests/vorrat_wirkung.mjs. Der frische Abruf der
+       Kern-Dateien unten ist der Teil, der diese Seite wirklich erneuert. */
 
     /* Kern-Dateien am HTTP-Cache vorbei frisch holen */
     if (window.fetch) {
