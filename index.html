@@ -411,10 +411,10 @@
         </div>
 
         <div class="contacts__map">
-          <iframe
-            title="Hardenstraße 51, Hamburg"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=10.0222%2C53.5314%2C10.0422%2C53.5414&layer=mapnik&marker=53.5363949%2C10.0321941"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <!-- Kein Karten-Rahmen: ein <iframe> zu openstreetmap.org lud beim Seitenaufruf
+               ungefragt fremde Inhalte und gab dabei die IP des Besuchers weiter. Jetzt ein
+               Link — erst wer tippt, geht zu OpenStreetMap. Wie auf perfectskinbeauty.de. -->
+          <a class="contacts__maplink" href="https://www.openstreetmap.org/?mlat=53.5363949&amp;mlon=10.0321941#map=16/53.5363949/10.0321941" target="_blank" rel="noopener">🗺️ Hardenstraße 51, Hamburg — OpenStreetMap</a>
           <a class="contacts__directions" href="https://www.google.com/maps/dir/?api=1&destination=53.5363949,10.0321941" target="_blank" rel="noopener" data-i18n="co_route">Проложить маршрут →</a>
         </div>
       </div>
@@ -432,9 +432,9 @@
         </div>
       </div>
       <nav class="footer__links" aria-label="Impressum / AGB / Datenschutz">
-        <a href="#" data-legal="impressum">Impressum</a>
-        <a href="#" data-legal="agb">AGB</a>
-        <a href="#" data-legal="datenschutz">Datenschutz</a>
+        <a href="https://perfectskinbeauty.de/impressum.html" target="_blank" rel="noopener">Impressum</a>
+        <a href="https://perfectskinbeauty.de/agb.html" target="_blank" rel="noopener">AGB</a>
+        <a href="https://perfectskinbeauty.de/datenschutz.html" target="_blank" rel="noopener">Datenschutz</a>
       </nav>
     </div>
   </footer>
